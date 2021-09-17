@@ -3,8 +3,8 @@ from concurrent import futures
 
 import grpc
 
-import recommendations_pb2_grpc
-from recommendations.recommendations_pb2 import (
+from gen import recommendations_pb2_grpc
+from recommendations.gen.recommendations_pb2 import (
     BookCategory, BookRecommendation, RecommendationResponse
 )
 
