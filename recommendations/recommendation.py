@@ -3,8 +3,8 @@ from concurrent import futures
 
 import grpc
 
-from gen import recommendations_pb2_grpc
-from recommendations.gen.recommendations_pb2 import (
+import recommendations_pb2_grpc
+from recommendations_pb2 import (
     BookCategory, BookRecommendation, RecommendationResponse
 )
 
@@ -56,6 +56,8 @@ def serve():
     )
     server.add_insecure_port("[::]:50051")
     server.start()
+
+    print("Server is running at [::]:50051")
     server.wait_for_termination()
 
 
